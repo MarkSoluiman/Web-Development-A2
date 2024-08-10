@@ -1,0 +1,37 @@
+
+<!-- Mark Soluiman
+18039781
+ -->
+
+ <!-- 
+Displays the layout of the admin page
+ -->
+
+<!DOCTYPE html>
+<html XMLns="http://www.w3.org/1999/xHTML">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="../xhr.js"></script>
+    <script type="text/javascript" src="search.js"> </script>
+    <link rel="stylesheet" type="text/css" href="admin.css">
+    <title>Document</title>
+
+
+</head>
+<body>
+
+    <form method="post">
+        <label>Search for a booking: <input type="text" name="bsearch"></label>
+        <input type="button" onClick="getData('searchprocess.php','targetDiv',bsearch.value)" value="Search for a booking">
+    </form>
+
+    <div id="targetDiv">
+
+    </div>
+
+    <a href="../Booking/booking.html">Make a booking</a>
+    
+</body>
+</html>

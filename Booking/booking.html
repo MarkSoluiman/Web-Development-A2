@@ -1,0 +1,76 @@
+<!-- Mark Soluiman -->
+<!-- 18039781-->
+
+<!-- 
+Displays the layout of the booking page
+ -->
+
+
+<!DOCTYPE html>
+<html XMLns="http://www.w3.org/1999/xHTML">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="../xhr.js"></script>
+    <script type="text/javascript" src="booking.js"> </script>
+    <link rel="stylesheet" type="text/css" href="booking.css">
+    <title>Document</title>
+
+
+</head>
+<body>
+
+    <form method="post">
+        <label class="small-text"> (*) required fields </label>
+
+        <label > * Customer Name:<input type="text" name="cname" required></label>
+        <br>
+        <label> * Phone Number:<input type="text" name="phone" required></label>
+        <br>
+        <label>Unit Number: <Input type="text" name="unumber"></label>
+        <br>
+        <label> * Street Number: <input type="text" name="snumber" required></label>
+        <br>
+        <label> * Street Name: <input type="text" name="stname" required></label>
+        <br>
+        <label>Suburb: <input type="text" name="sbname"></label>
+        <br>
+        <label>Destination Suburb: <input type="text" name="dsbname"></label>
+        <br>
+        <div class="datetime-inputs">
+            <label>Pick-Up Date: <input type="date" id="date" name="date"></label>
+            <label>Pick-Up Time: <input type="time" id="time" name="time"></label>
+          </div>
+
+          <input name="submit" type = "button" onClick = "getData('bookingprocess.php','targetDiv', cname.value, phone.value,unumber.value,snumber.value,stname.value,
+          sbname.value,dsbname.value,date.value,time.value) " value = "Make a booking">
+
+
+
+    </form>
+
+    <div id="targetDiv">
+
+
+    </div>
+
+    <a href="../Admin/admin.html"> Go to Admin Page to search for a booking </a>
+    
+
+    <!-- JS code to set the current date and current time for pickup date and pickup time -->
+    <script>
+        document.getElementById('date').valueAsDate = new Date();
+
+        var currentTime = new Date();
+
+    // Format the time as HH:mm (24-hour format)
+    var formattedTime = currentTime.getHours().toString().padStart(2, '0') + ':' + currentTime.getMinutes().toString().padStart(2, '0');
+
+    // Set the value of the input field
+    document.getElementById('time').value = formattedTime;
+
+
+    </script>
+</body>
+</html>

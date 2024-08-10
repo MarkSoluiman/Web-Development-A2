@@ -1,0 +1,58 @@
+
+/*Mark Soluiman
+18039781
+*/
+
+/* Styling for the booking page */
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  
+  form {
+    display: grid;
+    gap: 10px;
+  }
+  
+  label {
+    display: grid;
+    align-items: center;
+  }
+  .small-text{
+    font-size: 13px;
+    color: red;
+  }
+  
+  input[type="text"],
+  input[type="date"],
+  input[type="time"] {
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    width: 150px; 
+  }
+  
+  input[type="text"]:focus,
+  input[type="date"]:focus,
+  input[type="time"]:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  
+  input[type="button"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    width: 160px;
+  }
+  
+  input[type="button"]:hover {
+    background-color: #0056b3;
+    
+  }
+  

@@ -1,0 +1,22 @@
+-- 1-Table creation:
+ create table booking (
+			id int primary key auto_increment,
+			Booking_Reference varchar(8) unique,
+			Customer_Name varchar(50) not null,
+			Phone_Number varchar(12),
+			Unit_Number varchar(5),
+			Street_Number varchar(6) not null,
+			Street_Name varchar(50) not null,
+			Suburb varchar(50),
+			Destination_Suburb varchar(50),
+			Date date not null,
+			Time time not null,
+			Status varchar(50) not null
+
+		);
+
+-- 2- Insert into table booking with examples:
+
+INSERT INTO booking (Booking_Reference, Customer_Name, Phone_Number, Unit_Number, Street_Number, Street_Name, Subur`, Destination_Suburb, Date, Time,Status)
+VALUES ('BRN00100', 'John Smith', '021021', '', '6', 'street road', 'CBD', 'Albany', '22/05/2023', '19:02','Unassigned')";
+
